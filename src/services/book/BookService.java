@@ -1,23 +1,8 @@
 package services.book;
 
-public class BookService implements BookMethods {
-    @Override
-    public void addBook() {
+import model.Book;
 
-    }
+public class BookService {
 
-    @Override
-    public void removeBook() {
 
-    }
-
-    @Override
-    public void searchBook() {
-
-    }
-
-    @Override
-    public void listAllBooks() {
-
-    }
 }

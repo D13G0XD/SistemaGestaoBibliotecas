@@ -3,32 +3,23 @@ package model;
 public class Book {
 
     private String title;
-    private int releaseYear;
-    private int releaseMonth;
-    private int releaseDay;
+    private String releaseDate;
+    private int bookId;
     private boolean isLent;
 
-    public Book(String title, int releaseYear, int releaseMonth, int releaseDay) {
+    public Book(String title, String releaseDate, int bookId, boolean isLent) {
         this.title = title;
-        this.releaseYear = releaseYear;
-        this.releaseMonth = releaseMonth;
-        this.releaseDay = releaseDay;
+        this.releaseDate = releaseDate;
+        this.bookId = bookId;
+        this.isLent = isLent;
     }
 
     public String getTitle() {
         return title;
     }
 
-    public int getReleaseYear() {
-        return releaseYear;
-    }
-
-    public int getReleaseMonth() {
-        return releaseMonth;
-    }
-
-    public int getReleaseDay() {
-        return releaseDay;
+    public String getReleaseDate() {
+        return releaseDate;
     }
 
     public boolean isLent() {
@@ -37,5 +28,13 @@ public class Book {
 
     public void setLent(boolean lent) {
         isLent = lent;
+    }
+
+    public int getBookId() {
+        return bookId;
+    }
+
+    public void setBookId(int bookId) {
+        this.bookId = bookId;
     }
 }
