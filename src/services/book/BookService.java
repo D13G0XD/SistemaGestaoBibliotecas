@@ -23,19 +23,21 @@ public class BookService implements BookMethods{
     }
 
     @Override
-    public Book removeBook(Book book) {
-        if (lib.containsKey(book.getBookId())){
-            lib.remove(book.getBookId());
+    public void removeBook(int bookId) {
+        if (lib.containsKey(bookId)) {
+            lib.remove(bookId);
             System.out.println("Livro removido com sucesso!");
         }
-        System.out.println("O livro já foi removido ou não está cadastrado!");
-        return null;
+
+
     }
 
     @Override
-    public Book searchBook(int bookId) {
+    public void searchBook(int bookId) {
 
-        return lib.get(bookId);
+        if (lib.containsKey(bookId)) {
+            System.out.println(bookId);
+        }
 
     }
 
