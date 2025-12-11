@@ -57,7 +57,14 @@ public class Main {
 
             }
 
+            System.out.println("Deseja continuar? (s/n)");
+            String restart = input.next();
 
+            if (restart.equalsIgnoreCase("s")) {
+                option = -1;
+            } else {
+                option = 0;
+            }
 
 
         }
