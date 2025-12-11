@@ -8,7 +8,7 @@ public interface BookMethods {
 
     Book addBook(Book book);
     void removeBook(int bookId);
-    void searchBook(int bookId);
+    Book searchBook(int bookId);
     List<Book> listAllBooks();
     Book showStatus(Book book, boolean status);
 

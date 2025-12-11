@@ -33,11 +33,9 @@ public class BookService implements BookMethods{
     }
 
     @Override
-    public void searchBook(int bookId) {
+    public Book searchBook(int bookId) {
 
-        if (lib.containsKey(bookId)) {
-            System.out.println(bookId);
-        }
+        return lib.get(bookId);
 
     }
 

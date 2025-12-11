@@ -24,7 +24,7 @@ public class Main {
             System.out.println("5 - Checar Status de um livro");
             System.out.println("6 - Gerenciar usuários");
             System.out.println("0 - Sair");
-            System.out.print("\nDigite uma das opções acima: ");
+            System.out.print("Digite uma das opções acima: ");
             option = input.nextInt();
 
             switch (option) {
@@ -51,13 +51,27 @@ public class Main {
                     service.removeBook(bookId);
 
                 }
+                case 3 -> {
+                    System.out.print("\nDigite o código do livro que deseja encontrar: ");
+                    int bookId = input.nextInt();
+                    Book findBook = service.searchBook(bookId);
+
+                    if (findBook != null) {
+
+                        System.out.println("\nLivro encontrado. Nome do livro: " + findBook.getTitle());
+
+                    }
+
+
+
+                }
 
                 default -> System.out.println("Opção inválida, digite uma das opções acimas!\n ");
 
 
             }
 
-            System.out.println("Deseja continuar? (s/n)");
+            System.out.print("\nDeseja continuar? (s/n): ");
             String restart = input.next();
 
             if (restart.equalsIgnoreCase("s")) {
