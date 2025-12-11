@@ -16,7 +16,7 @@ public class BookService implements BookMethods{
             System.out.println("Erro: O livro já está cadastrado");
         }
         else{
-            System.out.println("Livro cadastrado com sucesso!");
+            System.out.println("Livro cadastrado com sucesso!\n");
 
         }
         return lib.put(book.getBookId(), book);
@@ -26,7 +26,7 @@ public class BookService implements BookMethods{
     public void removeBook(int bookId) {
         if (lib.containsKey(bookId)) {
             lib.remove(bookId);
-            System.out.println("Livro removido com sucesso!");
+            System.out.println("Livro removido com sucesso!\n");
         }
 
 
