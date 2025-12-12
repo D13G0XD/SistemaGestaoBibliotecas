@@ -67,8 +67,10 @@ public class Main {
                     if (service.listAllBooks().isEmpty()) {
                         System.out.println("Não há livros cadastrados");
                     } else {
-                        System.out.println("Lista dos livros cadastrados: ");
-                        System.out.println(service.listAllBooks());
+                        System.out.println("Lista dos livros cadastrados: \n");
+                        for (Book bookList : service.listAllBooks()) {
+                            System.out.println(bookList);
+                        }
                     }
 
                 }
