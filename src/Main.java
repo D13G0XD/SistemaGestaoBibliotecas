@@ -61,8 +61,15 @@ public class Main {
                         System.out.println("\nLivro encontrado. Nome do livro: " + findBook.getTitle());
 
                     }
+                }
 
-
+                case 4 -> {
+                    if (service.listAllBooks().isEmpty()) {
+                        System.out.println("Não há livros cadastrados");
+                    } else {
+                        System.out.println("Lista dos livros cadastrados: ");
+                        System.out.println(service.listAllBooks());
+                    }
 
                 }
 
@@ -71,7 +78,7 @@ public class Main {
 
             }
 
-            System.out.print("\nDeseja continuar? (s/n): ");
+            System.out.print("Deseja continuar? (s/n): ");
             String restart = input.next();
 
             if (restart.equalsIgnoreCase("s")) {
