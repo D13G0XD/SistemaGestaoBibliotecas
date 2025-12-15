@@ -1,7 +1,9 @@
 package services.user;
 
+import model.User;
+
 public interface ManageUsers {
-    void showUsers();
-    void addUsers();
+    void addUsers(User user);
     void removeUsers();
+    void showUsers();
 }
