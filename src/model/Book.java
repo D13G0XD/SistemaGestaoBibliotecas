@@ -7,11 +7,11 @@ public class Book {
     protected int bookId;
     protected boolean status;
 
-    public Book(String title, String releaseDate, int bookId, boolean isLent) {
+    public Book(String title, String releaseDate, int bookId) {
         this.title = title;
         this.releaseDate = releaseDate;
         this.bookId = bookId;
-        this.status = isLent;
+
     }
 
     public String getTitle() {
@@ -22,13 +22,6 @@ public class Book {
         return releaseDate;
     }
 
-    public boolean isStatus() {
-        return status;
-    }
-
-    public void setStatus(boolean status) {
-        this.status = status;
-    }
 
     public int getBookId() {
         return bookId;

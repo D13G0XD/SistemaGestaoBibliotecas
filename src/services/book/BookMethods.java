@@ -10,6 +10,5 @@ public interface BookMethods {
     void removeBook(int bookId);
     Book searchBook(int bookId);
     List<Book> listAllBooks();
-    Book showStatus(Book book, boolean status);
 
 }

@@ -3,6 +3,7 @@ import services.book.BookService;
 
 import java.util.Scanner;
 
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
@@ -13,6 +14,13 @@ public class Main {
 
         int option = -1;
 
+        System.out.println("---- Selecione uma opção -----");
+        System.out.println("Digite u para gerenciar usuários ou l para livros");
+        String management = input.next();
+
+
+
+
 
         while (option != 0) {
 
@@ -21,9 +29,7 @@ public class Main {
             System.out.println("2 - Remover livro");
             System.out.println("3 - Procurar livro");
             System.out.println("4 - Listar todos os livros cadastrados");
-            System.out.println("5 - Checar Status de um livro");
-            System.out.println("6 - Gerenciar usuários");
-            System.out.println("0 - Sair");
+            System.out.println("5 - Gerenciar usuários");
             System.out.print("Digite uma das opções acima: ");
             option = input.nextInt();
 
@@ -36,8 +42,7 @@ public class Main {
                     String releaseDate = input.next();
                     System.out.print("Digite o código de fabricante: ");
                     int bookId = input.nextInt();
-                    boolean isLent = false;
-                    Book book = new Book(title, releaseDate, bookId, isLent);
+                    Book book = new Book(title, releaseDate, bookId);
 
                     service.addBook(book);
 
@@ -65,7 +70,7 @@ public class Main {
 
                 case 4 -> {
                     if (service.listAllBooks().isEmpty()) {
-                        System.out.println("Não há livros cadastrados");
+                        System.out.println("Não há livros cadastrados\n");
                     } else {
                         System.out.println("Lista dos livros cadastrados: \n");
                         for (Book bookList : service.listAllBooks()) {
@@ -75,7 +80,8 @@ public class Main {
 
                 }
 
-                default -> System.out.println("Opção inválida, digite uma das opções acimas!\n ");
+
+                default -> System.out.println("Opção inválida, digite uma das opções acima");
 
 
             }
@@ -91,9 +97,6 @@ public class Main {
 
 
         }
-
-
-
 
     }
 }

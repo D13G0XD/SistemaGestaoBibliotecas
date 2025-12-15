@@ -45,15 +45,5 @@ public class BookService implements BookMethods{
 
     }
 
-    @Override
-    public Book showStatus(Book book, boolean status) {
-        if (book.isStatus()) {
-
-            System.out.println("O livro já está emprestado e não pode ser reservado!");
-
-        }
-        System.out.println("O livro pode ser reservado!");
-        return null;
-    }
 
 }
