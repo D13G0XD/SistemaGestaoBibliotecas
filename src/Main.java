@@ -12,11 +12,9 @@ public class Main {
         BookService service = new BookService();
         Scanner input = new Scanner(System.in);
 
-        int option = -1;
+        boolean menu = true;
 
-        System.out.println("---- Selecione uma opção -----");
-
-        while (option != 0) {
+        while (menu) {
 
             System.out.println("----- Bem vindo ao sistema de gerenciamento de livros! -----\n");
             System.out.println("1 - Cadastrar livro");
@@ -24,8 +22,9 @@ public class Main {
             System.out.println("3 - Procurar livro");
             System.out.println("4 - Listar todos os livros cadastrados");
             System.out.println("5 - Gerenciar usuários");
+            System.out.println("6 - Sair");
             System.out.print("Digite uma das opções acima: ");
-            option = input.nextInt();
+            int option = input.nextInt();
 
             switch (option) {
 
@@ -72,6 +71,25 @@ public class Main {
                         }
                     }
 
+                } case 5 -> {
+                    System.out.println("\n1 - Cadastrar usuário");
+                    System.out.println("2 - Remover usuário");
+                    System.out.println("3 - Listar usuários");
+                    System.out.println("4 - Voltar");
+                    System.out.print("Digite a opção que deseja selecionar: ");
+                    int userOption = input.nextInt();
+
+                }
+
+                case 6 -> {
+                    System.out.print("Deseja sair? (s/n): ");
+                    String restart = input.next();
+
+                    if (restart.equalsIgnoreCase("s")) {
+                        menu = false;
+                    } else {
+                        System.out.println("Digite uma opção válida!\n");
+                    }
                 }
 
 
@@ -80,14 +98,7 @@ public class Main {
 
             }
 
-            System.out.print("Deseja continuar? (s/n): ");
-            String restart = input.next();
 
-            if (restart.equalsIgnoreCase("s")) {
-                option = -1;
-            } else {
-                option = 0;
-            }
 
 
         }
