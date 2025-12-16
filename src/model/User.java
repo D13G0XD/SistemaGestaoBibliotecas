@@ -5,6 +5,7 @@ public class User {
     private String name;
     private int age;
     private String registerDate;
+    private String id;
 
     public User(String name, int age, String registerDate) {
         this.name = name;
@@ -22,5 +23,9 @@ public class User {
 
     public String getRegisterDate() {
         return registerDate;
+    }
+
+    public String getId() {
+        return id;
     }
 }

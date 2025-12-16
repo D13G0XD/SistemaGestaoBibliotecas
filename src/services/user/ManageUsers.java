@@ -1,9 +1,10 @@
 package services.user;
 
+import model.Book;
 import model.User;
 
 public interface ManageUsers {
-    void addUsers(User user);
+    User addUsers(User user);
     void removeUsers();
     void showUsers();
 }

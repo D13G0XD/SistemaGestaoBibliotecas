@@ -15,12 +15,6 @@ public class Main {
         int option = -1;
 
         System.out.println("---- Selecione uma opção -----");
-        System.out.println("Digite u para gerenciar usuários ou l para livros");
-        String management = input.next();
-
-
-
-
 
         while (option != 0) {
 
