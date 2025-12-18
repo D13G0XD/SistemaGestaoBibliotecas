@@ -1,6 +1,9 @@
 import model.Book;
+import model.User;
 import services.book.BookService;
+import services.user.UserService;
 
+import java.time.LocalDate;
 import java.util.Scanner;
 
 
@@ -10,6 +13,7 @@ public class Main {
     public static void main(String[] args) {
 
         BookService service = new BookService();
+        UserService userService = new UserService();
         Scanner input = new Scanner(System.in);
 
         boolean menu = true;
@@ -79,6 +83,25 @@ public class Main {
                     System.out.print("Digite a opção que deseja selecionar: ");
                     int userOption = input.nextInt();
 
+                    switch (userOption) {
+                        case 1 -> {
+
+                            System.out.print("Digite o seu nome: ");
+                            String name = input.next();
+                            System.out.print("Digite sua idade: ");
+                            int age = input.nextInt();
+                            System.out.print("Digite um do usuário: ");
+                            String id = input.next();
+                            LocalDate registerDate = LocalDate.now();
+
+                            User user = new User(name, age, id, registerDate);
+
+                            userService.addUsers(user);
+
+
+                        }default -> System.out.println("Digite uma opção válida!");
+                    }
+
                 }
 
                 case 6 -> {
@@ -90,6 +113,7 @@ public class Main {
                     } else {
                         System.out.println("Digite uma opção válida!\n");
                     }
+
                 }
 
 

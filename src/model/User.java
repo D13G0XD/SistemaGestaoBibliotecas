@@ -1,15 +1,18 @@
 package model;
 
+import java.time.LocalDate;
+
 public class User {
 
     private String name;
     private int age;
-    private String registerDate;
+    private LocalDate registerDate;
     private String id;
 
-    public User(String name, int age, String registerDate) {
+    public User(String name, int age, String id, LocalDate registerDate) {
         this.name = name;
         this.age = age;
+        this.id = id;
         this.registerDate = registerDate;
     }
 
@@ -21,7 +24,7 @@ public class User {
         return age;
     }
 
-    public String getRegisterDate() {
+    public LocalDate getRegisterDate() {
         return registerDate;
     }
 
