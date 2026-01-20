@@ -20,7 +20,7 @@ public class Main {
 
         while (menu) {
 
-            System.out.println("----- Bem vindo ao sistema de gerenciamento de livros! -----\n");
+            System.out.println("\n----- Bem vindo ao sistema de gerenciamento de livros! -----\n");
             System.out.println("1 - Cadastrar livro");
             System.out.println("2 - Remover livro");
             System.out.println("3 - Procurar livro");
@@ -90,7 +90,7 @@ public class Main {
                             String name = input.next();
                             System.out.print("Digite sua idade: ");
                             int age = input.nextInt();
-                            System.out.print("Digite um do usuário: ");
+                            System.out.print("Digite o ID do usuário: ");
                             String id = input.next();
                             LocalDate registerDate = LocalDate.now();
 
@@ -99,7 +99,16 @@ public class Main {
                             userService.addUsers(user);
 
 
-                        }default -> System.out.println("Digite uma opção válida!");
+                        }
+
+                        case 2 -> {
+                            System.out.println("Digite o ID do usuário: ");
+                            String id = input.next();
+                            userService.removeUsers(id);
+
+                        }
+
+                        default -> System.out.println("Digite uma opção válida!");
                     }
 
                 }

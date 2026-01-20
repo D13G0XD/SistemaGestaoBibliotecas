@@ -1,14 +1,12 @@
 package services.user;
 
-import model.Book;
 import model.User;
-
 import java.util.HashMap;
 import java.util.Map;
 
 public class UserService implements ManageUsers {
 
-    private Map<String, User> users = new HashMap<>();
+    private final Map<String, User> users = new HashMap<>();
 
 
     @Override
@@ -26,7 +24,10 @@ public class UserService implements ManageUsers {
     }
 
     @Override
-    public void removeUsers() {
+    public void removeUsers(String userId) {
+        users.remove(userId);
+        System.out.println("Usuário removido com sucesso!");
+
 
     }
 
