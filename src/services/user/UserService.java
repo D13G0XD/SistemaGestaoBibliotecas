@@ -1,7 +1,10 @@
 package services.user;
 
 import model.User;
+
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class UserService implements ManageUsers {
@@ -32,7 +35,9 @@ public class UserService implements ManageUsers {
     }
 
     @Override
-    public void showUsers() {
+    public List<User> showUsers() {
+
+        return new ArrayList<>(users.values());
 
     }
 

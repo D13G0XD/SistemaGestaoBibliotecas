@@ -20,13 +20,13 @@ public class Main {
 
         while (menu) {
 
-            System.out.println("\n----- Bem vindo ao sistema de gerenciamento de livros! -----\n");
+            System.out.println("\n----- Bem vindo ao sistema de gerenciamento de livros! -----");
             System.out.println("1 - Cadastrar livro");
             System.out.println("2 - Remover livro");
             System.out.println("3 - Procurar livro");
             System.out.println("4 - Listar todos os livros cadastrados");
             System.out.println("5 - Gerenciar usuários");
-            System.out.println("6 - Sair");
+            System.out.println("6 - Sair\n");
             System.out.print("Digite uma das opções acima: ");
             int option = input.nextInt();
 
@@ -76,10 +76,11 @@ public class Main {
                     }
 
                 } case 5 -> {
-                    System.out.println("\n1 - Cadastrar usuário");
+                    System.out.println("\n---- Central Usários ----");
+                    System.out.println("1 - Cadastrar usuário");
                     System.out.println("2 - Remover usuário");
                     System.out.println("3 - Listar usuários");
-                    System.out.println("4 - Voltar");
+                    System.out.println("4 - Voltar\n");
                     System.out.print("Digite a opção que deseja selecionar: ");
                     int userOption = input.nextInt();
 
@@ -105,6 +106,21 @@ public class Main {
                             System.out.println("Digite o ID do usuário: ");
                             String id = input.next();
                             userService.removeUsers(id);
+
+                        }
+
+                        case 3 -> {
+
+                            if (userService.showUsers().isEmpty()) {
+                                System.out.println("Não há usuários cadastrados!");
+                            } else {
+
+                                for (User userList : userService.showUsers()) {
+                                    System.out.println(userList);
+
+                                }
+
+                            }
 
                         }
 
