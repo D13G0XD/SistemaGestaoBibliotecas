@@ -1,5 +1,5 @@
-import model.Book;
-import model.User;
+import entities.Book;
+import entities.User;
 import services.book.BookService;
 import services.user.UserService;
 
