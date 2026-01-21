@@ -12,12 +12,11 @@ O sistema permite o gerenciamento completo de um acervo de livros, permitindo ca
 * **Consulta por ISBN:** Busca rápida de livros específicos através de seu identificador único.
 * **Listagem Geral:** Visualização de todos os livros presentes no acervo.
 * **Remoção:** Exclusão de livros do sistema via ISBN.
-* **Gestão de Usuários (Em progresso):** Estrutura preparada para gerenciamento de membros da biblioteca.
+* **Gestão de Usuários:** Estrutura preparada para gerenciamento de membros da biblioteca.
 
 ## 🛠️ Tecnologias Utilizadas
 * **Linguagem:** Java (JDK 17 ou superior)
 * **Arquitetura:** Padrão de camadas (Entities, Services e Interfaces)
-* **Estrutura de Dados:** `HashMap` para garantir performance de busca $O(1)$ por ISBN.
 
 ## 🏛️ Estrutura do Projeto
 O projeto foi desenvolvido seguindo boas práticas de separação de responsabilidades:
@@ -26,7 +25,6 @@ O projeto foi desenvolvido seguindo boas práticas de separação de responsabil
 
 * `entities`: Classes que representam os objetos do mundo real (Livro, Usuário).
 * `services`: Interfaces que definem os contratos e regras de negócio.
-* `services.impl`: Implementações concretas das regras de negócio.
 * `Main`: Classe de entrada que gerencia o loop de interação com o usuário.
 
 ## 🚀 Como Executar
